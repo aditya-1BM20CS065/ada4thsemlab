@@ -1,0 +1,26 @@
+#include <stdio.h>
+#include <time.h>
+
+int gcd(int x,int y){
+    int z;
+    if(y==0)
+    return x;
+    z=x%y;
+    x=y;
+    y=z;
+    return gcd(x,y);
+}
+void main()
+{
+    int a,b,c;
+    
+    printf("Enter two numbers: ");
+    scanf("%d",&a);
+    scanf("%d",&b);
+    
+    
+    c=gcd(a,b);
+    
+    printf("The gcd of two numbers is %d\n",c);
+    
+}
