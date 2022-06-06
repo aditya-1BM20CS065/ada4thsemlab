@@ -1,0 +1,24 @@
+#include <stdio.h>
+void tower(int n,char sourc,char temp,char desti)
+{
+    if(n==1)
+    {
+    printf("move %d disc from %c to %c\n ",n,sourc,desti);
+}    
+else
+{
+   
+   printf("move %d disc from %c to %c\n ",n,sourc,desti);
+   tower(n-1,temp,sourc,desti);
+     printf("move %d disc from %c to %c\n ",n,sourc,desti);
+    
+}
+}
+int main()
+{
+    int n;
+    printf("enter number of discs");
+    scanf("%d",&n);
+    tower(n,'S','T','D');
+    return 0;
+}
